@@ -1,0 +1,41 @@
+{
+  "name": "mentor.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production webpack --config config/webpack/webpack.prod.config.js",
+    "dev": "NODE_ENV=development webpack-dev-server --config config/webpack/webpack.server.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flex-js/mentor.io.git"
+  },
+  "author": "Flex.js",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Flex-js/mentor.io/issues"
+  },
+  "homepage": "https://github.com/Flex-js/mentor.io#readme",
+  "devDependencies": {
+    "@types/react": "16.9.11",
+    "@types/react-dom": "16.9.4",
+    "clean-webpack-plugin": "3.0.0",
+    "css-loader": "3.2.0",
+    "file-loader": "4.2.0",
+    "html-webpack-plugin": "3.2.0",
+    "mini-css-extract-plugin": "0.8.0",
+    "style-loader": "1.0.0",
+    "ts-loader": "6.2.1",
+    "tslint": "5.20.1",
+    "typescript": "3.7.2",
+    "webpack": "4.41.2",
+    "webpack-cli": "3.3.10",
+    "webpack-dev-server": "3.9.0"
+  },
+  "dependencies": {
+    "react": "0.0.0-experimental-b53ea6ca0",
+    "react-dom": "0.0.0-experimental-b53ea6ca0"
+  }
+}
