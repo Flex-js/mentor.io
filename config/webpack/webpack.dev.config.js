@@ -8,20 +8,14 @@ const isDEV = process.env.NODE_ENV !== 'production';
 
 const getEntityFromRoot = (entity) => path.resolve(__dirname, `../../${entity}`);
 const chunkName = '[name][hash].min';
+console.log(getEntityFromRoot('src'))
 
 module.exports = {
 	mode: 'development',
 	entry: './src/index.tsx',
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js'],
-		modules: [
-			"node_modules",
-			getEntityFromRoot('src')
-		],
-		alias: {
-			'modules': getEntityFromRoot('src/modules'),
-			'assets': getEntityFromRoot('src/assets'),
-		}
+		modules: ["node_modules", getEntityFromRoot('src')],
 	},
 	devtool: 'inline-source-map',
 	output: {
@@ -55,7 +49,7 @@ module.exports = {
 				},
 			],
 		}, {
-			test: /\.(png|jpe?g|gif|woff)$/i,
+			test: /\.(png|ttf|svg|jpe?g|gif|woff|eot|woff2)$/i,
 			use: [
 				{
 				  loader: 'file-loader',

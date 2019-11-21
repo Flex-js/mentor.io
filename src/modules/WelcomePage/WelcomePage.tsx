@@ -1,6 +1,6 @@
 import React from 'react';
 import Loader from 'ui/Loader/Loader';
-import styles from './WelcomePage.css'
+import styles from './WelcomePage.css';
 
 export default function WelcomePage() {
 	return (
@@ -10,5 +10,5 @@ export default function WelcomePage() {
 				Your education begins...
 			</div>
 		</div>
-	)
+	);
 }
