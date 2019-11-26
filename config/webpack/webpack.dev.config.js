@@ -8,20 +8,20 @@ const isDEV = process.env.NODE_ENV !== 'production';
 
 const getEntityFromRoot = (entity) => path.resolve(__dirname, `../../${entity}`);
 const chunkName = '[name][hash].min';
-console.log(getEntityFromRoot('src'))
 
 module.exports = {
 	mode: 'development',
 	entry: './src/index.tsx',
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js'],
-		modules: ["node_modules", getEntityFromRoot('src')],
+		modules: [getEntityFromRoot('src'), "node_modules"],
 	},
 	devtool: 'inline-source-map',
 	output: {
 		path: getEntityFromRoot('dist'),
 		filename: `${chunkName}.js`,
 		chunkFilename: `${chunkName}.js`,
+		publicPath: '/',
 	},
 	module: {
 		rules: [{
@@ -37,7 +37,7 @@ module.exports = {
 					: {
 						loader: MiniCssExtractPlugin.loader,
 						options: {
-							publicPath: '../../dist',
+							publicPath: getEntityFromRoot('dist'),
 							hmr: process.env.NODE_ENV === 'development',
 						}
 					},
@@ -47,6 +47,14 @@ module.exports = {
 						modules: true,
 					},
 				},
+				{
+					loader: 'postcss-loader',
+					options: {
+						config: {
+							path: getEntityFromRoot('config/postcss/')
+						},
+					}
+				}
 			],
 		}, {
 			test: /\.(png|ttf|svg|jpe?g|gif|woff|eot|woff2)$/i,

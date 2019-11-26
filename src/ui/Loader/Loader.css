@@ -23,43 +23,19 @@
     overflow: hidden;
     background: transparent;
     transform-style: preserve-3d;
-    -webkit-transform-origin: left center;
     transform-origin: left center;
 }
   
 .book .page:nth-child(1) {
-    -webkit-animation: pageTurn 1.2s cubic-bezier(0, .39, 1, .68) 1.6s infinite;
     animation: pageTurn 1.2s cubic-bezier(0, .39, 1, .68) 1.6s infinite;
 }
   
 .book .page:nth-child(2) {
-    -webkit-animation: pageTurn 1.2s cubic-bezier(0, .39, 1, .68) 1.45s infinite;
     animation: pageTurn 1.2s cubic-bezier(0, .39, 1, .68) 1.45s infinite;
 }
   
 .book .page:nth-child(3) {
-    -webkit-animation: pageTurn 1.2s cubic-bezier(0, .39, 1, .68) 1.2s infinite;
     animation: pageTurn 1.2s cubic-bezier(0, .39, 1, .68) 1.2s infinite;
-}
-
-@-webkit-keyframes pageTurn {
-    0% {
-      	-webkit-transform: rotateY( 0deg);
-      	transform: rotateY( 0deg);
-    }
-    20% {
-     	 background: transparent;
-    }
-    40% {
-		background: transparent;
-		-webkit-transform: rotateY( -180deg);
-		transform: rotateY( -180deg);
-    }
-    100% {
-		background: transparent;
-		-webkit-transform: rotateY( -180deg);
-		transform: rotateY( -180deg);
-    }
 }
   
 @keyframes pageTurn {

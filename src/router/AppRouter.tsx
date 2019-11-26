@@ -5,7 +5,6 @@ import {
 	BrowserRouter as Router,
 	Route,
 	Switch,
-	Link,
 } from 'react-router-dom';
 
 export default function AppRouter() {
@@ -13,7 +12,6 @@ export default function AppRouter() {
 		<Router>
 			<Switch>
 				<Route exact path="/">
-					<Link to="/mentors">Home</Link>
 					<WelcomePage />
 				</Route>
 				<Route path="/mentors">
