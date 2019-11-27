@@ -1,0 +1,22 @@
+@import 'css/common/typography.css';
+
+.uiTable {
+	width: 100%;
+	box-sizing: border-box;
+	text-align: left;
+}
+
+.uiTableRow {}
+
+.uiTableCell {
+	border-bottom: 1px solid var(--gray300);
+	height: 30px;
+}
+
+.uiTableHeaderRow {
+	border: 1px solid var(--mainBlack)
+}
+
+.uiTableHeaderCell {
+	composes: uiTableCell text--bold;
+}

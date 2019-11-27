@@ -11,7 +11,7 @@ const chunkName = '[name][hash].min';
 
 module.exports = {
 	mode: 'development',
-	entry: './src/index.tsx',
+	entry: getEntityFromRoot('src/index.tsx'),
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js'],
 		modules: [getEntityFromRoot('src'), "node_modules"],

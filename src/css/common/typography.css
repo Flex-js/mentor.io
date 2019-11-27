@@ -1,0 +1,66 @@
+@import 'css/common/vars/vars.css';
+
+@font-face {
+	font-family: "PlexMono";
+	src: url('../../assets/fonts/IBMPlexMono-Light.woff') format("woff");
+}
+
+@font-face {
+	font-family: "PlexMono-SemiBold";
+	src: url('../../assets/fonts/IBMPlexMono-SemiBold.woff') format("woff");
+}
+  
+.text-xx--small {
+	font-size: 10px;
+}
+
+.text-x--small {
+	font-size: 12px;
+}
+
+.text--small {
+	font-size: 14px;
+}
+
+.text--xx--medium {
+	font-size: 16px;
+}
+
+.text-x-medium {
+	font-size: 18px;
+}
+
+.text--medium {
+	font-size: 20px;
+}
+
+.text-xx--large {
+	font-size: 24px;
+}
+
+.text-x--large {
+	font-size: 30px;
+}
+
+.text--large {
+	font-size: 36px;
+}
+
+.text {
+	composes: text--small;
+	font-variant-numeric: tabular-nums;
+	color: var(--mainBlack);
+	font-family: PlexMono;
+}
+
+.overflowEllipsis {
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.text--bold {
+	composes: text;
+	font-family: PlexMono-SemiBold;
+	font-weight: 600;
+}

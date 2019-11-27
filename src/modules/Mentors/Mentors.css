@@ -1,5 +1,12 @@
 @import 'css/common/vars/vars.css';
+@import 'css/common/typography.css';
 
 .mentors {
+	composes: text;
 	background-color: var(--backgroundColor);
+	flex: 1;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	height: 100%;
 }
